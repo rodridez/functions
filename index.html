@@ -6,6 +6,7 @@
     <title>Rodrigo Gouveia – Functions</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="stylesheet.css">
+    <script defer src="assets/myBooks.js"></script>
 </head>
 <body>
     <div class="clouds-front"></div>
@@ -21,27 +22,7 @@
                 <div class="shelf-center">
                     <div class="plank"></div>
                     <div class="books-container">
-                        <div class="shelf">
-                            <div class="book"><div class="book-inner"><p>Pride and Prejudice</p></div></div>
-                            <div class="book"></div>
-                            <div class="book"></div>
-                            <div class="book"></div>
-                            <div class="book"></div>
-                            <div class="book"></div>
-                            <div class="book"></div>
-                            <div class="book"></div>
-                            <div class="book"></div>
-                            <div class="book"></div>
-                            <div class="book"></div>
-                            <div class="book"></div>
-                            <div class="book"></div>
-                            <div class="book"></div>
-                            <div class="book"></div>
-                            <div class="book"></div>
-                            <div class="book"></div>
-                            <div class="book"></div>
-                            <div class="book"></div>
-                            <div class="book"></div>
+                        <div class="shelf" id="books-place">
                         </div>
                         <div class="shelf-gap">
                             <div class="book-gap"></div>
@@ -58,8 +39,13 @@
                 </div>
             </div>
         </div>
-        <div class="calendar"><img src="assets/Calendar.png"></div>
-        <div class="button"><button class="add-button">Add a New Book</button></div>
+        <div class="calendar">
+            <picture>
+                <source srcset="assets/Calendar-small.png" media="(max-width: 730px)">
+                <img src="assets/Calendar.png">
+            </picture></div>
+        <div class="button mobile-hidden"><button class="add-button">Add a New Book</button></div>
+        <div class="button web-hidden"><button class="add-button">+</button></div>
     </section>
 </body>
 </html>
