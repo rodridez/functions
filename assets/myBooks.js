@@ -16,7 +16,7 @@ const renderItems = (books) => {
 
 		let listItem = //I was working here >> 
 		`
-        <button class="book" style="width: ${item.pageNumber > 500 ? item.pageNumber / 8 : item.pageNumber / 5}px; height: calc(200px - ${item.pageNumber / 50}px); background-color: ${item.color}">
+        <button class="book" style="cursor: grab; width: ${item.pageNumber > 500 ? item.pageNumber / 8 : item.pageNumber / 5}px; height: calc(200px - ${item.pageNumber / 50}px); background-color: ${item.color}" >
           <p>${item.title}</p> 
         </button>
 

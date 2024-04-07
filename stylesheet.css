@@ -167,6 +167,11 @@ body {
         display: flex;
         justify-content: center;
     }
+
+    .book:hover {
+        width: 75px;
+        background-color: black;
+    }
     
     /* not using it anymore???
         .book-inner {
