@@ -16,7 +16,7 @@ const renderItems = (books) => {
 
 		let listItem = //I was working here >> 
 		`
-        <button class="book" style="cursor: grab; width: ${item.pageNumber > 500 ? item.pageNumber / 8 : item.pageNumber / 5}px; height: calc(200px - ${item.pageNumber / 50}px); background-color: ${item.color}" >
+        <button class="book" style="cursor: grab; width: ${item.pageNumber > 500 ? item.pageNumber / 8 : item.pageNumber / 5}px; height: calc(200px - ${item.pageNumber / 50}px); background-color: ${item.color}" onmouseout="this.style.width='75px'; this.style.backgroundColor='black';">
           <p>${item.title}</p> 
         </button>
 
@@ -75,5 +75,13 @@ fetch('assets/books.json')
 
 
 
+	// let sarahExampleVariable1 = document.querySelectorAll('step_1')
 
+	// sarahExampleVariable1.forEach((createASeparateItem) => {
+		
+	// 	createASeparateItem.onclick = () => {
+
+	// 		createASeparateItem.classList.toggle('active')
+	// 	}
+	// })
 
