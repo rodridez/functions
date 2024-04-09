@@ -28,7 +28,7 @@ const renderItems = (books) => {
 					<h3>${item.author}</h3>
 					<p>${item.description}</p>
 				</div>
-				<button class="close">X</button>
+				<button class="close">&times;</button>
 			</div>
 		</div>
 		`
@@ -55,6 +55,29 @@ const renderItems = (books) => {
 
 		closeButton.onclick = () => {
 			closeButton.parentElement.parentElement.classList.remove('active')
+		}
+	})
+
+	//function to open the form
+
+	let openForm = document.querySelector('#book_form_box')
+	let formButton = document.querySelectorAll('.add-button')
+
+	formButton.forEach((formButtonPress) => {
+	
+		formButtonPress.onclick = () => {
+			console.log ("you clicked!")
+			openForm.classList.toggle('active')
+		}
+	})
+
+	//fuction to close the form
+	let closeForm = document.querySelectorAll('.closeForm')
+
+	closeForm.forEach((closeFormPress) => {
+
+		closeFormPress.onclick = () => {
+			openForm.classList.remove('active')
 		}
 	})
 

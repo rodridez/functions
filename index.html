@@ -44,8 +44,40 @@
                 <source srcset="assets/Calendar-small.png" media="(max-width: 730px)">
                 <img src="assets/Calendar.png">
             </picture>
-            <div id="date"><p>08</p></div>
+            <div class="date"><p>08</p></div>
         </div>
+
+        <div class="book_form_box" id="book_form_box">
+			<form class="book_form">
+                <button class="closeForm">&times;</button>
+                    <div class="form_item">
+                        <label for="book-title">Book Title:*</label>
+                        <input type="text" id="book-title" name="book-title" required>
+                    </div>
+                    <div class="form_item">
+                        <label for="author">Author:*</label>
+                        <input type="text" id="author" name="author" required>
+                    </div>
+                    <div class="form_item">
+                        <label for="page-number">Page Number:*</label>
+                        <input type="number" id="page-number" name="page-number" required>
+                    </div>
+                    <div class="form_item">
+                        <label for="cover-image">Cover Image (URL):*</label>
+                        <input type="text" id="cover-image" name="cover-image" required>
+                    </div>
+                    <div class="form_item">
+                        <label for="description">Description:*</label>
+                        <textarea id="description" name="description" rows="4" required></textarea>
+                    </div>
+                    <div class="form_item">
+                        <label for="spine-color">Spine Color:</label>
+                        <input type="color" id="spine-color" name="spine-color" required>
+                    </div>
+                    <button type="submit">Add Book</button>
+			</form>
+		</div>
+
         <div class="button mobile-hidden"><button class="add-button">Add a New Book</button></div>
         <div class="button web-hidden"><button class="add-button">+</button></div>
     </section>

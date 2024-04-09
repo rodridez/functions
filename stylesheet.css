@@ -289,10 +289,11 @@ body {
     width: 100%;
 }
 
-.close {
+.close, .closeForm {
     position: absolute;
     right: 5%;
     top: 5%;
+    background-color: #ffffff;
 }
 
 h2 {
@@ -316,18 +317,90 @@ p {
     width: 169px;
 }
 
-#date {
+.date {
     position: absolute;
-    top: 27%;
+    top: 19%;
     width: 70x;
 }
 
-#date p {
+.date p {
     font-family: "Archivo", sans-serif;
     font-weight: 800;
     font-size: 42pt;
     color: #626262;
 }
+
+/* FORM SETUP */
+
+.book_form_box {
+    display: none;
+}
+
+.book_form_box.active {
+    display: block;
+    position: fixed;
+    inset: 0px;
+    background: rgba(235, 235, 235, 0.211);
+    backdrop-filter: blur(4px);
+    z-index: 50;
+}
+
+.book_form {
+    position: relative;
+    max-width: 400px;
+    margin: 8% auto;
+    padding: 5% 2%;
+    border-radius: 25px;
+    background-color: #ffffff;
+    box-shadow: 0px 3px 34px 0px rgba(48,48,48,0.35);
+}
+
+.form_item {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="number"], textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #6D6D6D;
+    border-radius: 5px;
+    font-family: "Archivo", sans-serif;
+    font-weight: 300;
+    font-size: 11pt;
+    line-height: 14pt;
+}
+
+input[type="color"] {
+    width: 30px;
+    height: 32px;
+    padding: 1px;
+    border: 1px solid #6D6D6D;
+    border-radius: 5px;
+}
+
+textarea {
+    overflow: scroll;
+}
+
+.book_form button {
+    background-color: #6D6D6D;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.book_form button:hover {
+    background-color: #839faf;
+}
+
+
 
 /* BREAKPOINTS */
 
@@ -407,7 +480,7 @@ p {
         overflow: scroll;
     }
 
-    #date p {
+    .date p {
         font-size: 27pt;
     }
 
