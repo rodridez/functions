@@ -269,31 +269,37 @@ body {
     padding: 5%;
     border-radius: 25px;
     background-color: #ffffff;
+    border: 3px solid #6D6D6D;
     box-shadow: 0px 3px 34px 0px rgba(48,48,48,0.35);
 }
 
 .book_description_img {
-    flex: 1;
+    flex: 2;
 }
 
 .book_description_text {
-    flex: 2;
+    flex: 3;
     padding: 5%;
 }
 
 .book_description_text * {
-    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.book_description_text h2 {
+    border-bottom: 2px solid #6D6D6D;
 }
 
 .book_description_img img{
     width: 100%;
+    border: 2px solid #6D6D6D;
 }
 
-.close, .closeForm {
+.close, .closeForm, .closeCal {
     position: absolute;
     right: 5%;
-    top: 5%;
-    background-color: #ffffff;
+    top: 10px;
+    font-size: 30pt;
 }
 
 h2 {
@@ -319,8 +325,12 @@ p {
 
 .date {
     position: absolute;
-    top: 19%;
+    top: 110px;
     width: 70x;
+}
+
+.date:hover {
+    color: crimson;
 }
 
 .date p {
@@ -352,6 +362,7 @@ p {
     padding: 5% 2%;
     border-radius: 25px;
     background-color: #ffffff;
+    border: 3px solid #6D6D6D;
     box-shadow: 0px 3px 34px 0px rgba(48,48,48,0.35);
 }
 
@@ -387,7 +398,7 @@ textarea {
     overflow: scroll;
 }
 
-.book_form button {
+#submitBookButton {
     background-color: #6D6D6D;
     color: white;
     padding: 10px 20px;
@@ -396,11 +407,87 @@ textarea {
     cursor: pointer;
 }
 
-.book_form button:hover {
+#submitBookButton:hover {
     background-color: #839faf;
 }
 
+/* HERE IM STARTING TO TEST THE CALERNDAR */
 
+#calendar_box {
+    display: none;
+}
+
+#calendar_box.active {
+    display: block;
+    position: fixed;
+    inset: 0px;
+    background: rgba(235, 235, 235, 0.211);
+    backdrop-filter: blur(4px);
+    z-index: 50;
+}
+
+.calendar_inner {
+    position: relative;
+    max-width: 670px;
+    margin: 180px auto;
+    height: 500px;
+    padding: 90px 17px;
+    border-radius: 25px;
+    background-color: #ffffff;
+    border: 3px solid #6D6D6D;
+    box-shadow: 0px 3px 34px 0px rgba(48,48,48,0.35);
+}
+
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.calendar_inner div {
+    width: 50px;
+}
+    
+    .jan { grid-area: 1 / 1 / 2 / 2; }
+    .feb { grid-area: 1 / 2 / 2 / 3; }
+    .mar { grid-area: 1 / 3 / 2 / 4; }
+    .apr { grid-area: 1 / 4 / 2 / 5; }
+    .may { grid-area: 2 / 1 / 3 / 2; }
+    .jun { grid-area: 2 / 2 / 3 / 3; }
+    .jul { grid-area: 2 / 3 / 3 / 4; }
+    .aug { grid-area: 2 / 4 / 3 / 5; }
+    .sep { grid-area: 3 / 1 / 4 / 2; }
+    .oct { grid-area: 3 / 2 / 4 / 3; }
+    .nov { grid-area: 3 / 3 / 4 / 4; }
+    .dec { grid-area: 3 / 4 / 4 / 5; } */
+
+.months {
+    display: flex;
+    width: 636px;
+}
+
+.months p {
+    width: 53px;
+    padding: 1px;
+    margin: 2px;
+    border: 1px solid #6D6D6D;
+    border-radius: 5px;
+}
+
+.calendar_inner li{
+    padding: 2px;
+    margin-bottom: 2px;
+    border: 2px solid #6D6D6D;
+    width: 54.4px;
+    height: 30px;
+    margin-left: 168px;
+    background-color:chocolate;
+}
+
+.calendar_inner ul {
+    margin-top: 5px;
+}
 
 /* BREAKPOINTS */
 
@@ -478,6 +565,10 @@ textarea {
 
     .book_description_text {
         overflow: scroll;
+    }
+
+    .date {
+        top: 27px;
     }
 
     .date p {

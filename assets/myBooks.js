@@ -81,6 +81,25 @@ const renderItems = (books) => {
 		}
 	})
 
+	//function to open the calendar
+
+	let openCal = document.querySelector('#openCal')
+	let calBox = document.querySelector('#calendar_box')
+
+	openCal.onclick = () => {
+			console.log ("you clicked!")
+			calBox.classList.toggle('active')
+		}
+	
+
+	//fuction to close the calendar
+	let closeCal = document.querySelector('.closeCal')
+
+	closeCal.onclick = () => {
+			calBox.parentElement.classList.remove('active')
+		}
+	
+
 }
 
 
@@ -96,15 +115,4 @@ fetch('assets/books.json')
 	})
 
 
-
-
-	// let sarahExampleVariable1 = document.querySelectorAll('step_1')
-
-	// sarahExampleVariable1.forEach((createASeparateItem) => {
-		
-	// 	createASeparateItem.onclick = () => {
-
-	// 		createASeparateItem.classList.toggle('active')
-	// 	}
-	// })
 

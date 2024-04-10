@@ -39,12 +39,34 @@
                 </div>
             </div>
         </div>
-        <div class="calendar">
+        <div class="calendar" id="openCal">
             <picture>
                 <source srcset="assets/Calendar-small.png" media="(max-width: 730px)">
                 <img src="assets/Calendar.png">
             </picture>
             <div class="date"><p>08</p></div>
+            <div id="calendar_box">
+                <div class="calendar_inner">
+                    <button class="closeCal">&times;</button>
+                    <div class="months"><p>Jan</p><p>Feb</p><p>Mar</p><p>Apr</p><p>May</p><p>Jun</p><p>Jul</p><p>Aug</p><p>Sep</p><p>Oct</p><p>Nov</p><p>Dez</p></div>
+                    <ul>
+                        <li><p>Dune</p></li>
+                        <li><p>Dune</p></li>
+                    </ul>
+                    <!-- <div class="jan"><p>Jan</p></div>
+                    <div class="feb"></div>
+                    <div class="mar"></div>
+                    <div class="apr"></div>
+                    <div class="may"></div>
+                    <div class="jun"></div>
+                    <div class="jul"></div>
+                    <div class="aug"></div>
+                    <div class="sep"></div>
+                    <div class="oct"></div>
+                    <div class="nov"></div>
+                    <div class="dec"></div> -->
+                </div>
+            </div>
         </div>
 
         <div class="book_form_box" id="book_form_box">
@@ -74,7 +96,7 @@
                         <label for="spine-color">Spine Color:</label>
                         <input type="color" id="spine-color" name="spine-color" required>
                     </div>
-                    <button type="submit">Add Book</button>
+                    <button id="submitBookButton" type="submit">Add Book</button>
 			</form>
 		</div>
 
