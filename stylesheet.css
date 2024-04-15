@@ -31,7 +31,7 @@ body {
     
     .logo { 
         grid-area: 1 / 1 / 2 / 2;
-        width: 183px;
+        width: 215px;
     }
 
     .settings { 
@@ -57,6 +57,56 @@ body {
         align-items: center;
     }
 
+/* ANIMATIONS */
+
+.bookshelf {
+    animation: fadeInAnimation_bookshelf ease 3s;
+}
+@keyframes fadeInAnimation_bookshelf {
+    0% {
+        opacity: 0;
+
+    }
+    100% {
+        opacity: revert;
+
+    }
+}
+
+.calendar {
+    animation: fadeInAnimation_calendar ease 3s;
+}
+@keyframes fadeInAnimation_calendar  {
+    0% {
+        opacity: 0;
+    }
+    
+    20% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}  
+
+.add-button {
+    animation: fadeInAnimation_addButton ease 3s;
+}
+@keyframes fadeInAnimation_addButton  {
+    0% {
+        opacity: 0;
+    }
+    
+    35% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}  
+
 /* BOOKSHELF STRUCTURE */
 
 .structure {
@@ -75,6 +125,7 @@ body {
         height: 20px;
         width: 100%;
         border: 3px solid #6D6D6D;
+        padding-top: 10pt;
     }
     
     .structure div.plank:nth-child(2) {
@@ -82,6 +133,7 @@ body {
         width: 97%;
         margin-top: -3px;
         border: 3px solid #6D6D6D;
+        padding-top: 3pt;
     }
     
     .structure div.plank:nth-child(3) {
@@ -89,6 +141,7 @@ body {
         width: 95%;
         margin-top: -3px;
         border: 3px solid #6D6D6D;
+        padding-top: 8pt;
     }
 
     .structure div.plank:nth-child(4) {
@@ -96,6 +149,7 @@ body {
         width: 95%;
         margin-top: -3px;
         border: 3px solid #6D6D6D;
+        padding-top: 3pt;
     }
 
     .shelf-center {
@@ -105,6 +159,7 @@ body {
         border: 3px  solid #6D6D6D;
         border-bottom: none;
         display: flex;
+        /* background: url("assets/clouds_front.png") repeat-x; */
     }
 
     .shelf-center div.plank:nth-child(1){
@@ -137,7 +192,7 @@ body {
         align-items: flex-end;
         align-content: flex-end;
         flex-wrap: wrap;
-        row-gap: 20px;
+        row-gap: 28px;
         position: relative;
     } 
 
@@ -146,8 +201,8 @@ body {
         position: absolute;
         top: 0;
         display: grid;
-        grid-template-rows: 240px;
-        grid-row-gap: 50px;
+        grid-template-rows: 243px;
+        grid-row-gap: 52px;
     } 
 
     .book-gap {
@@ -176,8 +231,7 @@ body {
     }
 
     .book:hover {
-        width: 75px !important; 
-        background-color: black !important;
+        transform: translate(0px, -15px) scale(1, 1.1);
     }
     
     /* not using it anymore???
@@ -236,6 +290,11 @@ body {
     z-index: 5;
 }
 
+.add-button:hover {
+    background-color: #7eafb6;
+    transform: translate(0px, -10px)
+}
+
 .web-hidden {
     display: none;
 }
@@ -247,6 +306,7 @@ body {
     z-index: 3;
     width: 100%;
     height: 30vh;
+    pointer-events:none;
     background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
  }
@@ -269,7 +329,7 @@ body {
     overflow: hidden;
     position: absolute;
     bottom: -1%;
-    opacity: 50%;
+    opacity: 30%;
 }
 
 .clouds_top {
@@ -293,15 +353,15 @@ body {
     z-index: -10;
     overflow: hidden;
     position: absolute;
-    bottom: 30%;
-    opacity: 50%;
+    bottom: 0%;
+    opacity: 20%;
 }
 
 .clouds_back {
-    background: url("assets/clouds_front.png") repeat-x;
-    height: 360px;
+    background: url("assets/clouds_back.png") repeat-x;
+    height: 600px;
     width: 6000px;
-    animation: clouds_back 560s linear infinite;
+    animation: clouds_back 460s linear infinite;
 }
 
 @keyframes clouds_back {
@@ -402,15 +462,30 @@ p {
     width: 169px;
 }
 
+.calendar_box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.calendar_box:hover {
+    transform: translate(0px, -15px);
+}
+
+.calendar_box:hover .date p {
+    color: #7eafb6;
+}
+
 .date {
     position: absolute;
     top: 110px;
     width: 70x;
 }
 
-.date:hover {
+/* .date p:hover {
+    transform: translate(0px, -15px);
     color: crimson;
-}
+} */
 
 .date p {
     font-family: "Archivo", sans-serif;
@@ -487,7 +562,7 @@ textarea {
 }
 
 #submitBookButton:hover {
-    background-color: #839faf;
+    background-color: #7eafb6;
 }
 
 /* HERE IM STARTING TO TEST THE CALERNDAR */
@@ -527,30 +602,6 @@ textarea {
     font-family: "Archivo", sans-serif;
     font-size: 16pt;
 }
-
-    /* display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-}
-
-.calendar_inner div {
-    width: 50px;
-}
-    
-    .jan { grid-area: 1 / 1 / 2 / 2; }
-    .feb { grid-area: 1 / 2 / 2 / 3; }
-    .mar { grid-area: 1 / 3 / 2 / 4; }
-    .apr { grid-area: 1 / 4 / 2 / 5; }
-    .may { grid-area: 2 / 1 / 3 / 2; }
-    .jun { grid-area: 2 / 2 / 3 / 3; }
-    .jul { grid-area: 2 / 3 / 3 / 4; }
-    .aug { grid-area: 2 / 4 / 3 / 5; }
-    .sep { grid-area: 3 / 1 / 4 / 2; }
-    .oct { grid-area: 3 / 2 / 4 / 3; }
-    .nov { grid-area: 3 / 3 / 4 / 4; }
-    .dec { grid-area: 3 / 4 / 4 / 5; } */
 
 .months_container {
     position: relative;
@@ -607,6 +658,7 @@ textarea {
 .calendar_inner ul {
     margin-top: 5px;
 }
+
 
 /* BREAKPOINTS */
 
