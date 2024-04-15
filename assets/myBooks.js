@@ -5,8 +5,9 @@ const renderItems = (books) => {
 	const bookList = document.getElementById('books-place') //creates a variable to look for the HTML ID
 
 	// Loop through each item in the data array
-	books.forEach((item) => {
+	books.forEach((item, index) => {
     console.log(item.title)
+	let delay = index * 0.1;
 
 		//let conditionalClass = '' // Set an empty class variable
 
@@ -16,7 +17,7 @@ const renderItems = (books) => {
 
 		let listItem = //I was working here >> 
 		`
-        <button class="book" style="cursor: grab; width: ${item.pageNumber > 500 ? item.pageNumber / 8 : item.pageNumber / 5}px; height: calc(200px - ${item.pageNumber / 50}px); background-color: ${item.color}" onmouseover="handleMouseOver(this)" onmouseout="handleMouseOut(this)">
+        <button class="book" style="cursor: grab; width: ${item.pageNumber > 500 ? item.pageNumber / 8 : item.pageNumber / 5}px; height: calc(200px - ${item.pageNumber / 50}px); background-color: ${item.color}; animation-delay: ${delay}s">
           <p>${item.title}</p> 
         </button>
 
@@ -36,13 +37,7 @@ const renderItems = (books) => {
 		bookList.insertAdjacentHTML('beforeend', listItem) // effectlive add the HTML? 
 	})
 
-		function handleMouseOver(button) {
-			button.style.transform = 'scale(1.1) translateY(-5px)'
-		}
-		
-		function handleMouseOut(button) {
-			button.style.transform = 'scale(1) translateY(0)'
-		}
+
 
 	//function to make the book-butotn work
 	let switchButton = document.querySelectorAll('.book')

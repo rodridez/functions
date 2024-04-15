@@ -122,6 +122,22 @@ body {
     }
 }  
 
+.book {
+    opacity: 0;
+    animation: fallAnimation 0.3s ease forwards;
+}
+
+  @keyframes fallAnimation {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 /* BOOKSHELF STRUCTURE */
 
 .structure {
@@ -246,7 +262,7 @@ body {
     }
 
     .book:hover {
-        transform: translate(0px, -15px) scale(1, 1.1);
+        transform: translate(0px, -15px) scale(1, 1.1) !important;
     }
     
     /* not using it anymore???
@@ -307,7 +323,7 @@ body {
 
 .add-button:hover {
     background-color: #7eafb6;
-    transform: translate(0px, -10px)
+    /* transform: translate(0px, -10px) */
 }
 
 .web-hidden {
@@ -388,6 +404,7 @@ body {
     }
   }
 
+
 /* LIGHT BOX SETUP */ 
 
 .book_description_box {
@@ -407,6 +424,8 @@ body {
 
 .book_description {
     position: fixed;
+    max-width: 900px;
+    margin: auto;
     display: flex;
     align-items: center;
     flex-basis: 0;  
@@ -414,7 +433,7 @@ body {
     /* top: -100%; */
     scale: 0%;
     padding: 5%;
-    border-radius: 25px;
+    /* border-radius: 25px; */
     background-color: #ffffff;
     border: 3px solid #6D6D6D;
     box-shadow: 0px 3px 34px 0px rgba(48,48,48,0.35);
@@ -434,6 +453,8 @@ body {
 .book_description_text {
     flex: 3;
     padding: 5%;
+    overflow: scroll;
+    height: 100%;
 }
 
 .book_description_text * {
@@ -477,17 +498,17 @@ p {
     width: 169px;
 }
 
-.calendar_box {
+.calendar_container {
     position: relative;
     display: flex;
     justify-content: center;
 }
 
-.calendar_box:hover {
-    transform: translate(0px, -15px);
-}
+/* .calendar_container:hover {
+    translate: -15px;
+} */
 
-.calendar_box:hover .date p {
+.calendar_container:hover .date p {
     color: #7eafb6;
 }
 
@@ -526,10 +547,11 @@ p {
 
 .book_form {
     position: relative;
-    max-width: 400px;
+    max-width: 90vw;
+    width: 400px;
     margin: 8% auto;
-    padding: 5% 2%;
-    border-radius: 25px;
+    padding: 50px 30px;
+    /* border-radius: 25px; */
     background-color: #ffffff;
     border: 3px solid #6D6D6D;
     box-shadow: 0px 3px 34px 0px rgba(48,48,48,0.35);
@@ -600,12 +622,13 @@ textarea {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    max-width: 330px;
+    max-width: 90vw;
+    width: 400px;
     margin: 180px auto;
     height: 500px;
     padding: 20px 17px;
     padding-top: 71px;
-    border-radius: 25px;
+    /* border-radius: 25px; */
     background-color: #ffffff;
     border: 3px solid #6D6D6D;
     box-shadow: 0px 3px 34px 0px rgba(48,48,48,0.35);
@@ -671,7 +694,7 @@ textarea {
 }
 
 .calendar_inner ul {
-    margin-top: 5px;
+    margin-top: 203px;
 }
 
 
@@ -727,6 +750,10 @@ textarea {
         margin: 0px;
     }
 
+    .calendar_inner {
+        margin-top: 130px;
+    }
+
     .mobile-hidden {
         display: none;
     }
@@ -749,8 +776,9 @@ textarea {
         height: 30%;
     }
 
-    .book_description_text {
-        overflow: scroll;
+    .book_form {
+        margin-top: 130px;
+        padding: 50px 5%;
     }
 
     .date {
