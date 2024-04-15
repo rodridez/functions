@@ -17,6 +17,7 @@ body {
     background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(219,243,255,1) 100%);
 }
 
+
 .main {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -58,6 +59,20 @@ body {
     }
 
 /* ANIMATIONS */
+
+.main {
+    animation: fadeInAnimation_main ease 3s;
+}
+@keyframes fadeInAnimation_main {
+    0% {
+        transform: translate(0px, 30px);
+
+    }
+    100% {
+        transform: translate(0px, 0px);
+
+    }
+}
 
 .bookshelf {
     animation: fadeInAnimation_bookshelf ease 3s;
