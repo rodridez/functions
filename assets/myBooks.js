@@ -3,6 +3,7 @@
 const renderItems = (books) => {
 	
 	const bookList = document.getElementById('books-place') //creates a variable to look for the HTML ID
+	const readingBooks = document.getElementById('readingBooks')
 
 	// Loop through each item in the data array
 	books.forEach((item, index) => {
@@ -35,6 +36,35 @@ const renderItems = (books) => {
 		`
 
 		bookList.insertAdjacentHTML('beforeend', listItem) // effectlive add the HTML? 
+	})
+
+	books.forEach((item) => {
+		console.log(item.pageNumber)
+
+		if (item.pageNumber <= 210) {
+
+		let readingBookItem =
+		
+		`
+		<li style="height: calc(2 * ${item.pageNumber}px / 20); background-color: ${item.color};"><p></p></li>
+		`
+
+		readingBooks.insertAdjacentHTML('beforeend', readingBookItem)
+
+		}
+
+		else {
+
+		let readingBookItem =
+		
+		`
+		<li style="height: calc(2 * ${item.pageNumber}px / 20); background-color: ${item.color};"><p>${item.title}</p></li>
+		`
+	
+		readingBooks.insertAdjacentHTML('beforeend', readingBookItem)
+			
+		}
+
 	})
 
 
