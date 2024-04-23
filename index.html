@@ -39,16 +39,16 @@
                 </div>
             </div>
         </div>
-        <div class="calendar" id="openCal">
+        <div class="calendar">
         <div class="calendar_container">
-            <picture>
+            <picture id="openCal">
                 <source srcset="assets/Calendar-small.png" media="(max-width: 730px)">
                 <img src="assets/Calendar.png">
             </picture>
-            <div class="date"><p>08</p></div>
+            <div class="date"><p id="todaysDate">08</p></div>
             <div id="calendar_box">
                 <div class="calendar_inner">
-                    <h2>MyCalendar</h2>
+                    <h2 class="MyCalendarH2">MyCalendar</h2>
                     <button class="closeCal">&times;</button>
                     <div class="months_container">
                         <div class="date_marker"></div>
@@ -84,14 +84,29 @@
                         <label for="description">Description:*</label>
                         <textarea id="description" name="description" rows="4" required></textarea>
                     </div>
-                    <div class="form_item">
-                        <label for="spine-color">Spine Color:</label>
-                        <input type="color" id="spine-color" name="spine-color" required>
+                    <div class="form-row">
+                        <div class="form_item">
+                            <label for="spine-color">Spine Color:</label>
+                            <input type="color" id="spine-color" name="spine-color" required>
+                        </div>
+                        <div class="form_checkbox">
+                            <input type="checkbox" name="done_reading" id="done_reading">
+                            <label class="checkbox-label" for="done_reading">Done reading</label>
+                        </div>
+                        <!-- in case I need the toggle back -->
+                        <!-- <div class="form_item"> 
+                            <label class="">Done reading?</label>
+                            <div class="toggle">
+                                <p>No</p>
+                                <label class="switch">
+                                <input type="checkbox" id="done-reading" name="done-reading" required>
+                                <span class="slider round"></span>
+                                </label>
+                                <p>Yes</p>
+                            </div>
+                            
+                        </div> -->
                     </div>
-                    <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label>
                     <button id="submitBookButton" type="submit">Add Book</button>
 			</form>
 		</div>
@@ -106,6 +121,9 @@
     </div>
     <div class="clouds_back_container">
         <div class="clouds_back"></div>
+    </div>
+    <div class="plane_container">
+        <div class="plane"></div>
     </div>
 </body>
 </html>
