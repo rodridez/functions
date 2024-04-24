@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodrigo Gouveia – Functions</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <script defer src="assets/myBooks.js"></script>
+</head>
+<body>
+    <div class="clouds-front"></div>
+    <section class="main">
+        <div class="logo"><img src="assets/Logo.png"></div>
+        <div class="share" id="sharePage"><picture><img src="assets/share.png"></picture></div>
+        <div class="bookshelf"> 
+            <div class="structure">
+                <div class="plank"></div>
+                <div class="plank"></div>
+                <div class="plank"></div>
+                <div class="plank"></div>
+                <div class="shelf-center">
+                    <div class="plank"></div>
+                    <div class="books-container">
+                        <div class="shelf" id="books-place">
+                        </div>
+                        <div class="shelf-gap">
+                            <div class="book-gap"></div>
+                            <div class="book-gap"></div>
+                            <div class="book-gap"></div>
+                            <div class="book-gap"></div>
+                            <div class="book-gap"></div>
+                            <div class="book-gap"></div>
+                            <div class="book-gap"></div>
+                            <div class="book-gap"></div>
+                        </div>
+                    </div>
+                    <div class="plank"></div>
+                </div>
+            </div>
+        </div>
+        <div class="calendar">
+        <div class="calendar_container">
+            <picture id="openCal">
+                <source srcset="assets/Calendar-small.png" media="(max-width: 730px)">
+                <img src="assets/Calendar.png">
+            </picture>
+            <div class="date"><p id="todaysDate">08</p></div>
+            <div id="calendar_box">
+                <div class="calendar_inner">
+                    <h2 class="MyCalendarH2">MyCalendar</h2>
+                    <button class="closeCal">&times;</button>
+                    <div class="months_container">
+                        <div class="date_marker"></div>
+                        <div class="months"><p>Jan</p><div class="months_divider"></div><p>Feb</p><div class="months_divider"></div><p>Mar</p><div class="months_divider"></div><p>Apr</p><div class="months_divider"></div><p>May</p><div class="months_divider"></div><p>Jun</p><div class="months_divider"></div><p>Jul</p><div class="months_divider"></div><p>Aug</p><div class="months_divider"></div><p>Sep</p><div class="months_divider"></div><p>Oct</p><div class="months_divider"></div><p>Nov</p><div class="months_divider"></div><p>Dez</p><div class="months_divider"></div></div>
+                        <ul id="readingBooks">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="book_form_box" id="book_form_box">
+			<form class="book_form">
+                <button class="closeForm">&times;</button>
+                    <div class="form_item">
+                        <label for="book-title">Book Title:*</label>
+                        <input type="text" id="book-title" name="book-title" required>
+                    </div>
+                    <div class="form_item">
+                        <label for="author">Author:*</label>
+                        <input type="text" id="author" name="author" required>
+                    </div>
+                    <div class="form_item">
+                        <label for="page-number">Page Number:*</label>
+                        <input type="number" id="page-number" name="page-number" required>
+                    </div>
+                    <div class="form_item">
+                        <label for="cover-image">Cover Image (URL):*</label>
+                        <input type="text" id="cover-image" name="cover-image" required>
+                    </div>
+                    <div class="form_item">
+                        <label for="description">Description:*</label>
+                        <textarea id="description" name="description" rows="4" required></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form_item">
+                            <label for="spine-color">Spine Color:</label>
+                            <input type="color" id="spine-color" name="spine-color" required>
+                        </div>
+                        <div class="form_checkbox">
+                            <input type="checkbox" name="done_reading" id="done_reading">
+                            <label class="checkbox-label" for="done_reading">Done reading</label>
+                        </div>
+                        <!-- in case I need the toggle back -->
+                        <!-- <div class="form_item"> 
+                            <label class="">Done reading?</label>
+                            <div class="toggle">
+                                <p>No</p>
+                                <label class="switch">
+                                <input type="checkbox" id="done-reading" name="done-reading" required>
+                                <span class="slider round"></span>
+                                </label>
+                                <p>Yes</p>
+                            </div>
+                            
+                        </div> -->
+                    </div>
+                    <button id="submitBookButton" type="submit">Add Book</button>
+			</form>
+		</div>
+
+        <div class="button mobile-hidden"><button class="add-button">Add a New Book</button></div>
+        <div class="button web-hidden"><button class="add-button">+</button></div>
+    </section>
+    <div class="background"><img src="assets/Wallpaper.png"></div>
+    <div class="clouds_top_container">
+        <div class="clouds_top"></div>
+        <!-- <div class="clouds_top"><img src="assets/clouds_front.png"></div> -->
+    </div>
+    <div class="clouds_back_container">
+        <div class="clouds_back"></div>
+    </div>
+    <div class="plane_container">
+        <div class="plane"></div>
+    </div>
+</body>
+</html>

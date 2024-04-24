@@ -1,12 +1,3 @@
-/* body .book_description_box.active {
-    background-color: black;
-    backdrop-filter: none;
-    background: rgb(235 235 235 / 0%);
-}
-
-.book_description_box.active:first-child {
-    background-color: black;
-} */
 
 .book_description_box.secondStep {
     background: rgb(235 235 235 / 0%);
@@ -65,7 +56,7 @@
 }
 
 .button.onboarding {
-    grid-area: 3 / 3 / 4 / 5;
+    grid-area: 3 / 2 / 4 / 6;
     align-items: flex-start;
     font-size: 14pt;
     cursor: grab;
@@ -119,4 +110,31 @@ footer a {
     color: #7eafb6;
     text-decoration: underline;
     cursor:grab;
+}
+
+/* BREAKPOINTS */
+
+@media (max-width: 730px) {
+
+    .button.onboarding {
+        grid-area: 3 / 2 / 4 / 6;;
+        align-items: center;
+        font-size: 14pt;
+        position: unset;
+    }
+
+    .add-button.onboarding {
+        font-size: 12pt;
+        padding: 7px 26px 9px 26px;
+    }
+    
+    .book_description_box.active .book_description {
+        top: 100px;
+        right: 30px;
+        left: 30px;
+    }
+
+    .steps {
+        margin: 25px 0px 50px 0px;
+    }
 }
