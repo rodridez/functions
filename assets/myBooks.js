@@ -7,8 +7,8 @@ const renderItems = (books) => {
 
 	// Loop through each item in the data array
 	books.forEach((item, index) => {
-    console.log(item.title)
-	let delay = index * 0.1;
+	console.log(item.title)
+	let delay = index * 0.1
 	
 	let checkboxId = `checkbox_${item.title}`
 
@@ -35,9 +35,9 @@ const renderItems = (books) => {
 						<button class="shareBook"><img src="assets/share.png"></img></button>
 					</div>
 					<div class="form_checkbox">
-                            <input type="checkbox" name="${item.title}" id="${checkboxId}" checked>
-                            <label class="checkbox-label" for="${checkboxId}">Done reading</label>
-                    </div>
+							<input type="checkbox" name="${item.title}" id="${checkboxId}" checked>
+							<label class="checkbox-label" for="${checkboxId}">Done reading</label>
+					</div>
 				</div>
 			</div>
 			`
@@ -84,12 +84,12 @@ const renderItems = (books) => {
 				button.onclick = () =>  {
 					console.log("you clicked to share!")
 			
-					let url = window.location.href;
+					let url = window.location.href
 					let encodedUrl = encodeURIComponent(url)
 
 					let message = `Hey! Look at what I am reading: ${item.title}. Check it out:`
 
-					let encodedMessage = encodeURIComponent(message);
+					let encodedMessage = encodeURIComponent(message)
 					let whatsappLink = `https://web.whatsapp.com/send?text=${encodedMessage} ${encodedUrl}`
 
 					window.open(whatsappLink, '_blank')
@@ -172,9 +172,9 @@ const renderItems = (books) => {
 	//fuunction to make today's date
 	let todaysDate = document.getElementById("todaysDate")
 
-	let today = new Date().getDate();
+	let today = new Date().getDate()
 	
-	todaysDate.textContent = today;
+	todaysDate.textContent = today
 
 	//function to make the book-butotn work
 	let switchButton = document.querySelectorAll('.book')
@@ -269,12 +269,12 @@ const renderItems = (books) => {
 	shareButton.onclick = () => {
 		console.log("you clicked to shar page!")
 	
-			let url = window.location.href;
+			let url = window.location.href
 			let encodedUrl = encodeURIComponent(url)
 
 			let message = `Hey! Look at my book collection:`
 
-			let encodedMessage = encodeURIComponent(message);
+			let encodedMessage = encodeURIComponent(message)
 			let whatsappLink = `https://web.whatsapp.com/send?text=${encodedMessage} ${encodedUrl}`
 
 			window.open(whatsappLink, '_blank')
@@ -451,9 +451,9 @@ submitBook.onsubmit = (event) => {
 fetch('assets/books.json')
 	.then(response => response.json())
 	.then(books => {
-    console.log (books)
+	console.log (books)
 		
-    //Calls the Function
+	//Calls the Function
 		renderItems(books)
 	})
 
