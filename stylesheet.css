@@ -405,7 +405,7 @@ body {
     overflow: hidden;
     position: absolute;
     bottom: -1%;
-    opacity: 30%;
+    opacity: 50%;
 }
 
 .clouds_top {
@@ -430,7 +430,7 @@ body {
     overflow: hidden;
     position: absolute;
     bottom: 0%;
-    opacity: 20%;
+    opacity: 30%;
 }
 
 .clouds_back {
@@ -1004,10 +1004,19 @@ input[type="checkbox"] {
         right: 0;
     }
 
+    .button_onboarding {
+        right: -18px;
+        bottom: -2px;
+    }
+
     .add-button {
         padding: 7px 26px 15px 26px;
         font-size: 30pt;
         margin: 30px;
+    }
+
+    .add-button.onboarding {
+        margin: 0px;
     }
 
     .calendar img {
@@ -1037,6 +1046,10 @@ input[type="checkbox"] {
         padding: 8% 2% 2% 2%;
     }
 
+    .book_description_img.onboarding {
+        max-height: 320px;
+    }
+
     .book_description_img {
         height: 30%;
     }
@@ -1061,5 +1074,9 @@ input[type="checkbox"] {
     .book_description_box .form_checkbox {
         position: static;
         margin-top: 10px;
+    }
+
+    .book_description_box.active .book_description {
+        inset: 5%;
     }
 }
